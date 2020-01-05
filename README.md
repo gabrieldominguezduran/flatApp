@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Apartments search app with Rails and React
 
-Things you may want to cover:
 
-* Ruby version
+##### Prerequisites
 
-* System dependencies
+The setups steps expect following tools installed on the system.
 
-* Configuration
+- Github
+- Ruby [2.7.0](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/)
+- Rails [6.0.2.1](https://rubygems.org/gems/rails/versions/6.0.2)
 
-* Database creation
+##### 1. Check out the repository
 
-* Database initialization
+```bash
+git clone git@github.com:gabrieldominguezduran/flatApp.git
+```
 
-* How to run the test suite
+##### 2. Install dependecies
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following commands to install all dependecies
 
-* Deployment instructions
+```ruby
+bundle install
+```
 
-* ...
+##### 3. Load ans migrate the seed to the database
+
+Run the following commands to do it.
+
+```ruby
+rake db:seed
+rake db:migrate
+```
+
+##### 3. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
+
