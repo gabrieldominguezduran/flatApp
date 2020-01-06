@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Header from '../Header'
+import SearchForm from '../SearchForm'
 
 class Home extends Component {
     constructor(){
@@ -20,6 +21,7 @@ class Home extends Component {
         return (
             <div>
                 <Header />
+                <SearchForm />
             </div>
         )
     }

@@ -1,25 +1,42 @@
 import React, { Component } from 'react'
 import main from '../../assets/images/main.jpg'
+import styled from 'styled-components'
+
+const Section = styled.section`
+    background-image: url(${main});
+    background-repeat: no-repeat;
+    background-position: center fixed;
+		background-size: cover;
+		width: 100vw;
+		heigth: 100vh;
+`
+
+const Title = styled.div`
+    padding: 20% 5%;
+`
+const P = styled.p`
+    font-size: 2em;
+    font-weight: 900;
+    line-heigth: 52px;
+    color: #FB8407 ;
+`
+const H1 = styled.h1`
+    font-size: 4em;
+    font-weight: 900;
+    line-heigth: 52px;
+		color: #FB8407;
+`
+
+
 
 const Header = () => {
     return (
-        <section className="home-section--1">
-            <div className="container">
-              <div className="row">
-                <div className="col col-sm-12 col-m-4">
-                  <div className="pt-4 mt-4 text-center">
-                    <h1>Flat App</h1>
-                      <p>Find your perfect flat match</p>
-                  </div>
-                </div>
-                <div className ="col col-sm-12 col-m-8">
-                    <div className="pt-4 mt-4 text-center">
-                      <img width="600" height="400" className="img-fluid" src={main}/>
-                    </div>
-                </div>
-              </div>
-            </div>
-        </section>
+        <Section>
+					<Title>
+						<H1>Flat App</H1>
+							<P>Find your perfect flat match</P>
+					</Title>          
+        </Section>
     )
 }
 
