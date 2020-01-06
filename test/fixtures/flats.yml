@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  description: MyString
+  price: MyString
+  m2: MyString
+  rooms: MyString
+  bathrooms: MyString
+  photo: MyString
+
+two:
+  city: MyString
+  description: MyString
+  price: MyString
+  m2: MyString
+  rooms: MyString
+  bathrooms: MyString
+  photo: MyString
