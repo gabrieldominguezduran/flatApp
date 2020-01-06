@@ -21,9 +21,9 @@ class Home extends Component {
             let res= []
             data.data.data.map( (data) => {
                 res.push({id: data.id, city: data.city, description: data.description, price: data.price, m2: data.m2, rooms: data.rooms, bathrooms: data.bathrooms, photo: data.photo 
-                 })
+                })
 
-                 this.setState({modules: res})
+                this.setState({modules: res})
             })
         })
         .catch(data => {

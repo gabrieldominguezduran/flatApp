@@ -28,7 +28,7 @@ const Input = styled.input`
 class SearchForm extends Component {
   constructor(props) {
     super()
-    this.state = { };
+    this.state = {};
   }
   myChangeHandler = (event) => {
     this.setState({});

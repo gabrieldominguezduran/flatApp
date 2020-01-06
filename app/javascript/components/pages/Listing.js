@@ -8,7 +8,7 @@ class Listing extends Component {
 
   render(){
     const items = this.props.modules.map( (data) => {
-      return <Item key={data.id} city={data.city} description={data.description} price={data.price} m2={data.m2} rooms={data.rooms} bathrooms={data.bathrooms} />
+      return <Item key={data.id} city={data.city} description={data.description} price={data.price} m2={data.m2} rooms={data.rooms} bathrooms={data.bathrooms} photo={data.photo} />
     })
     return(
       <div className="pt-5 pb-5">
