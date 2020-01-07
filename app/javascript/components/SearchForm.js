@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Home from './pages/Home'
 import styled from 'styled-components'
 
 
@@ -27,48 +26,62 @@ const Input = styled.input`
 
 class SearchForm extends Component {
   constructor(props) {
-    super()
-    this.state = {};
+    super(props)
+    this.state = {
+      filtered: []
+    }
+    this.handleChange = this.handleChange.bind(this)
   }
-  myChangeHandler = (event) => {
-    this.setState({});
+
+  componentDidMount() {
+    this.setState({
+      filtered: this.props.items
+    })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      filtered: nextProps.items
+    })
+  }
+
+  handleChange = (event) => {
+    let currentList = []
+
+    let newList = []
+
+    if(event.target.value !== "") {
+      currentList = this.props.items
+
+      newList = currentList.filter(item => {
+
+        const lc = item.toLowerCase()
+
+        const filter = event.target.value.toLowerCase()
+
+
+        return lc.includes(filter)
+
+      })
+  } else {
+    newList = this.props.items
+  }
+
+    this.setState({
+      filtered: newList
+    })
+
   }
   render() {
     return (
-      <form>
-        <Select name="city">
-          <option value="City">City</option>
-          <option value="">Barcelona</option>
-          <option value="">Bilbao</option>
-          <option value="">Madrid</option>
-          <option value="">Valencia</option>
-        </Select>
-      
-      <Select name="price">
-        <option value="Price">Price</option>
-        <option value="">Less than 200.000</option>
-        <option value="">200.000 - 300.000</option>
-        <option value="">300.000 - 400.000</option>
-        <option value="">More than 500.000</option>
-      </Select>
-    
-    <Select name="m2">
-      <option value="m2">M2</option>
-      <option value="">Less tha 50 m2</option>
-      <option value="">50 - 100 m2</option>
-      <option value="">More than 100m2</option>
-    </Select>
-  
-  <Select name="rooms">
-    <option value="rooms">Rooms</option>
-    <option value="">1</option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4+</option>
-    
-  </Select>
-  <Input type="submit" value="Find"></Input>
-</form>
+
+      <div>
+        <input type="text" className="input" onChange={this.handleChange} placeholder="City..." />
+        <input type="text" className="input" onChange={this.handleChange} placeholder="Price..." />
+        <input type="text" className="input" onChange={this.handleChange} placeholder="M2..." />
+        <input type="text" className="input" onChange={this.handleChange} placeholder="Rooms..." />
+        <input type="text" className="input" onChange={this.handleChange} placeholder="Bathrooms..." />
+      </div>   
     );
   }
 }
