@@ -27,7 +27,7 @@ const Input = styled.input`
 
 class SearchForm extends Component {
   constructor(props) {
-    super()
+    super(props)
     this.state = {};
   }
   myChangeHandler = (event) => {
@@ -37,7 +37,7 @@ class SearchForm extends Component {
     return (
       <form>
         <Select name="city">
-          <option value="City">City</option>
+          <option>City</option>
           <option value="">Barcelona</option>
           <option value="">Bilbao</option>
           <option value="">Madrid</option>
