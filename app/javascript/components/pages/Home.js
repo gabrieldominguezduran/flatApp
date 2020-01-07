@@ -36,7 +36,8 @@ class Home extends Component {
         return (
             <div>
                 <Header />
-                <SearchForm />
+                <SearchForm modules = {this.state.modules} />
+                
                 <Listing modules={this.state.modules} />
             </div>
         )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Item from '../Item'
+import SearchForm from '../SearchForm'
 
 class Listing extends Component {
   constructor(props){
