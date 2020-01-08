@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Header from '../Header'
-import SearchForm from '../SearchForm'
 import Listing from './Listing'
 import axios from 'axios'
 
@@ -36,7 +35,6 @@ class Home extends Component {
         return (
             <div>
                 <Header />
-                <SearchForm />
                 <Listing modules={this.state.modules} />
             </div>
         )

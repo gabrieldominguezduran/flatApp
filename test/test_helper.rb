@@ -11,3 +11,6 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+##test examples##
+##https://www.thegreatcodeadventure.com/better-rails-5-api-controller-tests-with-rspec-shared-examples/##

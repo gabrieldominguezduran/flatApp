@@ -22,7 +22,7 @@ const Item = (props) => {
         <Div className="card-body">
         <H4 className="card-tilte">{props.city}</H4>
         <P className="card-text">{props.description} <br/> {props.price} |  <FaCheckSquare/>  {props.m2} |  <FaBed/>  {props.rooms} | <FaBath />  {props.bathrooms}</P>
-    <a href="#" className="btn btn-light float-right">Map</a>
+    <a href="https://www.google.es/maps/@40.3565126,-3.7536421,7z" className="btn btn-light float-right">Map</a>
   </Div>
 </div>
     
