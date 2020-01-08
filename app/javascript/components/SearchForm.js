@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Item from './Item'
 
 
 
@@ -39,10 +38,12 @@ class SearchForm extends Component {
         maxBath: 0
 
       }
+
+      const allFlats = this.props.modules.data
   }
-  //Get data
+    
   componentDidMount() {
-    let flats = this.props.modules(data)
+    let flats = this.props.modules(allFlats)
     let maxPrice = Math.max(...flats.map(data => data.price))
     let maxSize = Math.max(...flats.map(data => data.m2))
     
@@ -85,8 +86,7 @@ class SearchForm extends Component {
   }
 
 
-    
+  export default SearchForm
   
 
 
-export default SearchForm
